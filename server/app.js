@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 
 /////******************MODULES******************************////
 var index = require('./routes/index');
+var budget = require('./routes/budget');
 
 /**--------------------------------ROUTES------------------------**/
 
@@ -20,8 +21,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 //*********EXPRESS ROUTES*****************************************//
 app.use('/', index);
+app.use('/budget', budget);
+//////////////////////////MONGOOSE CONNECTION//////////////////////////////////
+var databaseUri = 'mongodb://localhost:27017/budget';
+mongoose.connect(databaseUri);
+mongoose.connection.on('connected', function(){
+  console.log("Mongoose connected to", databaseUri);
+});
 
-///////////////////////////////////////////////////////////////////
 
 ////////////*******************START SERVER*******************////
 app.set('port', process.env.PORT || 3000);
