@@ -1,7 +1,38 @@
 
+
+
 #dept {
   height: 200px;
   width: 200px;
   border-radius: 100px;
   background-color: lightblue;
+}
+
+#dept, h2 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#incomeTotal {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: lightblue;
+}
+
+#incomeTotal, h2 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+#remaining {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  background-color: lightblue;
+}
+
+#remaining, h2 {
+  text-align: center;
+  padding-top: 10px;
 }
