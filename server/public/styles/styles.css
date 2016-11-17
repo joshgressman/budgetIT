@@ -1,11 +1,24 @@
+body{
+font-family: sans-serif;
+}
 
 
+label {
+  font-size: 1.3em;
+}
+
+.input{
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 1.3em;
+}
 
 #dept {
   height: 200px;
   width: 200px;
   border-radius: 100px;
-  background-color: lightblue;
+  background-color: rgb(91, 192, 222);
 }
 
 #dept, h2 {
@@ -17,7 +30,7 @@
   height: 200px;
   width: 200px;
   border-radius: 100px;
-  background-color: lightblue;
+  background-color: rgb(91, 192, 222);
 }
 
 #incomeTotal, h2 {
@@ -29,10 +42,14 @@
   height: 200px;
   width: 200px;
   border-radius: 100px;
-  background-color: lightblue;
+  background-color: rgb(91, 192, 222);
 }
 
 #remaining, h2 {
   text-align: center;
   padding-top: 10px;
+}
+
+#addbtn{
+  margin: 10px 0 20px 0;
 }

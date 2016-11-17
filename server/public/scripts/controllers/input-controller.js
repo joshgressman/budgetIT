@@ -5,7 +5,6 @@ console.log('input controller is running');
 $scope.budget = {};
 //expenses that are dynamicaly created via add new function
 
-
 $scope.submitNewBudget = function () {
 var data = $scope.budget;
   console.log(data);
