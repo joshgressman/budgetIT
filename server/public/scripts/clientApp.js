@@ -1,5 +1,6 @@
 var myApp = angular.module('myApp', ['ngRoute']);
 
+//switch to UI Router
 myApp.config(['$routeProvider', function($routeProvider){
   $routeProvider
   .when('/welcome', {
