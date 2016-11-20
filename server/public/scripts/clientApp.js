@@ -11,6 +11,10 @@ myApp.config(['$routeProvider', function($routeProvider){
         templateUrl: '/views/partials/input.html',
         controller: "inputController"
       })
+    .when('/report', {
+        templateUrl: '/views/partials/report.html',
+        controller: "reportController"
+      })
     .otherwise({
       redirectTo: '/welcome'
     })
