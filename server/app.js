@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 /////******************MODULES******************************////
 var index = require('./routes/index');
 var budget = require('./routes/budget');
-
+var search = require('./routes/search');
 /**--------------------------------ROUTES------------------------**/
 
 
@@ -22,6 +22,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //*********EXPRESS ROUTES*****************************************//
 app.use('/', index);
 app.use('/budget', budget);
+app.use('/search', search);
 //////////////////////////MONGOOSE CONNECTION//////////////////////////////////
 var databaseUri = 'mongodb://localhost:27017/budget';
 mongoose.connect(databaseUri);
