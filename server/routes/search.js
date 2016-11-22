@@ -6,10 +6,11 @@ var Expense = require('../models/expenses'); //model scheema
 
 
 
+//************************POST CALL FIND BY VARIBLE OBJECT DATA***************//
 
-/****************GET BUDGET BY MONTH**************************//////
 router.post('/', function(req, res){
-Expense.find({}, function(err, expense){
+  console.log(req.body);
+Expense.find(req.body, function(err, expense){
   if(err){
     res.sendStatus(500);
     return;
@@ -17,5 +18,5 @@ Expense.find({}, function(err, expense){
   res.send(expense);
 });
 });
-
+//****************************************************************************//
 module.exports = router;
