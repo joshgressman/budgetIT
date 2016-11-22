@@ -17,7 +17,17 @@ budget.save(function(err){
 });
 });
 
-///****************GET BUDGET BY MONTH**************************//////
 
+
+///****************GET BUDGET BY MONTH**************************//////
+router.get('/', function(req, res){
+Budget.find({}, function(err, budget){
+  if(err){
+    res.sendStatus(500);
+    return;
+  }
+  res.send(budget);
+});
+});
 
 module.exports = router;
