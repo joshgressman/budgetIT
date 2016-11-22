@@ -9,7 +9,7 @@
 6 silly lifecycle gudgetit@1.0.0~prestart: no script for prestart, continuing
 7 info lifecycle gudgetit@1.0.0~start: gudgetit@1.0.0
 8 verbose lifecycle gudgetit@1.0.0~start: unsafe-perm in lifecycle true
-9 verbose lifecycle gudgetit@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/joshgressman/Desktop/budgetIt/node_modules/.bin:/usr/local/Cellar/node/6.3.1/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+9 verbose lifecycle gudgetit@1.0.0~start: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/joshgressman/Desktop/budgetIt/node_modules/.bin:/usr/local/Cellar/node/6.3.1/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Frameworks/Python.framework/Versions/3.5/bin
 10 verbose lifecycle gudgetit@1.0.0~start: CWD: /Users/joshgressman/Desktop/budgetIt
 11 silly lifecycle gudgetit@1.0.0~start: Args: [ '-c', 'node server/app.js' ]
 12 silly lifecycle gudgetit@1.0.0~start: Returned: code: 1  signal: null
