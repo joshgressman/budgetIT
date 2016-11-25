@@ -2,10 +2,10 @@ myApp.controller('reportsController', ['$scope', '$http', function($scope, $http
 
 //**********************DYNAMIC SEARCH QUERY IN POST SERVICE *********///////
 $scope.searchBy = {};
-$scope.searchBy.name = '';
+// $scope.searchBy.name = '';
 $scope.searchBy.month = '';
 
-$scope.housingPaid = false;
+
 
 
 //************************************************************************/////
@@ -29,7 +29,7 @@ $scope.budgetArray = [];
 });
 }
 //**************************************************************************//
-console.log($scope.housingPaid);
+
 
 
 
