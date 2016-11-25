@@ -4,28 +4,32 @@ myApp.controller('reportsController', ['$scope', '$http', function($scope, $http
 $scope.searchBy = {};
 $scope.searchBy.name = '';
 $scope.searchBy.month = '';
+
+$scope.housingPaid = false;
+
+
 //************************************************************************/////
 
 //*********************POST REQUEST RETURN DATA*****************************//
 //***************POST WITH DATA FOR CUSTOM OBJECT FIND CALL*****************//
 
 $scope.budgetData = {};
-
+//************************array of budget data for logic*******************//
+$scope.budgetArray = [];
   $scope.getBudget = function () {
   var data = $scope.searchBy;
-  console.log(data);
   $http.post('/search', data )
   .then(function(response){
   var expenseData = response.data;
-  console.log('response', expenseData);
   $scope.budgetData = expenseData;
-  console.log('budgetData',$scope.budgetData)
+  $scope.budgetArray = expenseData
+  console.log('budgetData',$scope.budgetData);
+  console.log('budgetArray',$scope.budgetArray);
   // console.log('new budget array', $scope.formData.budget);
 });
-
 }
 //**************************************************************************//
-
+console.log($scope.housingPaid);
 
 
 
