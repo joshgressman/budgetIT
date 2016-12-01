@@ -30,8 +30,7 @@
   </div>
 </div>
 </form>
-
-<div ng-repeat="budget in budgetData">
+<div ng-repeat="budget in budgetData.budgets">
   <div class="row" id="reportDiv">
   <div class="col-md-4">
   <div id="incomeTotal">
@@ -54,11 +53,16 @@
   </div>
   </div>
 </div>
-
-<table class = "table" id="table" ng-repeat="budget in budgetData">
+<div class = "row">
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<input type="button" class="btn btn-info" id="updateBudget" ng-click="updateBudget(budget)" value="Update Budget"/>
+</div>
+<div class="col-md-4"></div>
+</div>
+<table class = "table" id="table" ng-repeat="budget in budgetData.budgets">
 
   <thead>
-
   <tr>
     <th><h4>Expense</h4></th>
     <th><h4>Payment Amount</h4></th>
@@ -69,67 +73,67 @@
 <tr>
     <td><h5>Housing</h5></td>
     <td><h5>$ {{budget.housing}}</h5></td>
-    <td><h5><input class="check" type="checkbox">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="hosing-paid" ng-model="budget.housing" ng-change="budget.housing = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Auto Loan</h5></td>
     <td><h5>$ {{budget.auto}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="paid" >Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="auto-paid" ng-model="budget.auto" ng-change="budget.auto = 0" >Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Student Loans</h5></td>
     <td><h5>$ {{budget.student}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.student" ng-change="budget.student = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Health Insurance</h5></td>
     <td><h5>$ {{budget.health}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.health" ng-change="budget.health = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Auto Insurance</h5></td>
     <td><h5>$ {{budget.autoIns}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.autoIns" ng-change="budget.autoIns = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Credit Card</h5></td>
     <td><h5>$ {{budget.credit}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.credit" ng-change="budget.credit = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Cell Phone</h5></td>
     <td><h5>$ {{budget.cell}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.cell" ng-change="budget.cell = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Cable Bill</h5></td>
     <td><h5>$ {{budget.cable}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.cable" ng-change="budget.cable = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Internet Bill</h5></td>
     <td><h5>$ {{budget.internet}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.internet" ng-change="budget.internet = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Utilities</h5></td>
     <td><h5>$ {{budget.util}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.util" ng-change="budget.util = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Misc 1</h5></td>
     <td><h5>$ {{budget.misc1}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.misc1" ng-change="budget.misc1 = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Misc 2</h5></td>
     <td><h5>$ {{budget.misc2}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.misc2" ng-change="budget.misc2 = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Misc 3</h5></td>
     <td><h5>$ {{budget.misc3}}</h5></td>
-    <td><h5><input class="check" type="checkbox" name="paid" value="Paid">Paid</h5></td>
+    <td><h5><input class="check" type="checkbox" name="paid" value="Paid" ng-model="budget.misc3" ng-change="budget.misc3 = 0">Paid</h5></td>
 </tr>
 <tr>
     <td><h5>Living Expenses</h5></td>

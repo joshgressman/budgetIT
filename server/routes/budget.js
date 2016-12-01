@@ -30,4 +30,19 @@ Expense.find(data, function(err, expense){
 });
 });
 
+router.put('/:id', function(req, res){
+  var budget = req.body;
+  console.log('req.body', req.body);
+  var id = req.params.id;
+  console.log('id',req.params.id);
+  Expense.findByIdAndUpdate(id,budget, function(err, budget){
+    if(err){
+      return res.sendStatus(500);
+      
+    }
+    console.log("success");
+    res.status(204).send(budget);
+  });
+});
+
 module.exports = router;

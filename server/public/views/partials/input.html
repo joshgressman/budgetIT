@@ -14,10 +14,24 @@
 </div>
 <div class ="row">
 <div class="col-md-2">
-<label for="month">Budget Month:</label>
+<label for="selectMonth">Budget Month:</label>
 </div>
 <div class="col-md-2">
-<input type="text" class="input" name="month" ng-model="formData.month" />
+  <select id="selectMonth" ng-model="formData.month">
+    <option  value="">Select One</option>
+    <option  value="January">January</option>
+    <option  value="February">February</option>
+    <option  value="March">March</option>
+    <option  value="April">April</option>
+    <option  value="May">May</option>
+    <option  value="June">June</option>
+    <option  value="July">July</option>
+    <option  value="August">August</option>
+    <option  value="September">September</option>
+    <option  value="October">October</option>
+    <option  value="November">November</option>
+    <option  value="December">December</option>
+  </select>
 </div>
 </div>
 
@@ -171,21 +185,21 @@
 <div class="col-md-4">
 <div id="incomeTotal">
 <h2>Income</h2>
-<h2>${{budget.income}}</h2>
+<h2>${{formData.income}}</h2>
 </div>
 </div>
 <div class="col-md-4">
 <div id="dept">
   <h2>Expenses</h2>
-  <h2>${{budget.dept = budget.housing + budget.auto + budget.student + budget.health + budget.autoIns + budget.credit + budget.cell + budget.cable
-      + budget.internet + budget.util + budget.misc1 + budget.misc2 + budget.misc3 + budget.misc4 + budget.living }}</h2>
+  <h2>${{budget.dept = formData.housing + formData.auto + formData.student + formData.health + formData.autoIns + formData.credit + formData.cell + formData.cable
+      + formData.internet + formData.util + formData.misc1 + formData.misc2 + formData.misc3 + formData.misc4 + formData.living }}</h2>
 </div>
 </div>
 <div class="col-md-4">
 <div id="remaining">
 <h2>Remaining</h2>
-<h2>${{budget.remaining = budget.income - budget.housing - budget.auto - budget.student - budget.health - budget.autoIns - budget.credit - budget.cell - budget.cable
-    - budget.internet - budget.util - budget.misc1 - budget.misc2 - budget.misc3 - budget.misc4 - budget.living}}</h2>
+<h2>${{budget.remaining = formData.income - formData.housing - formData.auto - formData.student - formData.health - formData.autoIns - formData.credit - formData.cell - formData.cable
+    - formData.internet - formData.util - formData.misc1 - formData.misc2 - formData.misc3 - formData.misc4 - formData.living}}</h2>
 </div>
 </div>
 
