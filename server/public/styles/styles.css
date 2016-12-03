@@ -1,11 +1,17 @@
 body{
 font-family: sans-serif;
-
+padding: 0 0 0 0;
+margin: 0 0 0 0;
 
 }
 
 label {
 font-size: 1.3em;
+}
+
+a{
+  color: white;
+  font-size: 1.4em;
 }
 
 .input{
@@ -14,6 +20,28 @@ font-size: 1.3em;
   border-radius: 10px;
   font-size: 1.3em;
 }
+
+#header {
+  height: 120px;
+  background-color: rgb(91, 192, 222);
+  color: white;
+  margin: -20px 0 10px 0;
+  padding: 5px 0 0 10px;
+}
+
+#nav {
+  list-style-type: none;
+}
+
+#nav li  {
+    display: inline;;
+    padding-right: 4px;
+}
+
+#nav1 {
+  border-right: solid 2px white;
+}
+
 
 #dept {
   height: 200px;
