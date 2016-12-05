@@ -35,6 +35,7 @@ $scope.budgetArray = [];
   console.log('budgetData',$scope.budgetData);
   console.log('budgetArray',$scope.budgetArray);
   // console.log('new budget array', $scope.formData.budget);
+
 });
 }
 
@@ -49,7 +50,7 @@ $scope.updateBudget = function (budget) {
   });
 };
 
-
+////////////Function Conditional for alert///////
 
 
 /////////////////////////////END OF CONTROLLER////////////////////////////////
