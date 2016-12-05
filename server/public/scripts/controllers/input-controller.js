@@ -12,6 +12,8 @@ $scope.budgetStatus = function () {
   console.log($scope.moneyIn,$scope.moneyOut );
   if($scope.moneyIn < $scope.moneyOut){
     $scope.showAlert = true;
+  } else {
+    $scope.isGood = true;
   }
 }
 $scope.submitNewBudget = function () {

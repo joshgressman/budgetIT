@@ -1,11 +1,6 @@
 
 <div ng-controller="inputController">
 <div class="container">
-  <button ng-click="budgetStatus()">Check</button>
-<div class="alert alert-danger" ng-if="showAlert">
-   <strong>WARNING!</strong> Expenses are lower than income.
-</div>
-
 <form>
 <div class ="row">
 <div class="col-md-2">
@@ -182,6 +177,12 @@
 </div>
 </div>
 <div>
+<button ng-click="budgetStatus()">Check</button>
+<div class="alert alert-danger" ng-if="showAlert">
+ <strong>WARNING!</strong> Expenses are lower than income.
+</div>
+</div>
+<div ng-if="isGood">
 <button id="addbtn" class="btn btn-info" ng-click="submitNewBudget()">Submit</button>
 </div>
 <div class="row">
