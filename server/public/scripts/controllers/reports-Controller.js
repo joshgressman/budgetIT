@@ -4,7 +4,6 @@ myApp.controller('reportsController', ['$scope', '$http', function($scope, $http
 $scope.budgetData = {};
 $scope.budgets = [];
 $scope.budget = [];
-
 $scope.searchBy = {};
 // $scope.searchBy.name = '';
 $scope.searchBy.month = '';

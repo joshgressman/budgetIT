@@ -1,6 +1,11 @@
 
 <div ng-controller="inputController">
 <div class="container">
+  <button ng-click="budgetStatus()">Check</button>
+<div class="alert alert-danger" ng-if="showAlert">
+   <strong>WARNING!</strong> Expenses are lower than income.
+</div>
+
 <form>
 <div class ="row">
 <div class="col-md-2">
@@ -189,14 +194,14 @@
 <div class="col-md-4">
 <div id="dept">
   <h2>Expenses</h2>
-  <h2>${{budget.dept = formData.housing + formData.auto + formData.student + formData.health + formData.autoIns + formData.credit + formData.cell + formData.cable
+  <h2>${{dept = formData.housing + formData.auto + formData.student + formData.health + formData.autoIns + formData.credit + formData.cell + formData.cable
       + formData.internet + formData.util + formData.misc1 + formData.misc2 + formData.misc3 + formData.misc4 + formData.living }}</h2>
 </div>
 </div>
 <div class="col-md-4">
 <div id="remaining">
 <h2>Remaining</h2>
-<h2>${{budget.remaining = formData.income - formData.housing - formData.auto - formData.student - formData.health - formData.autoIns - formData.credit - formData.cell - formData.cable
+<h2>${{formData.income - formData.housing - formData.auto - formData.student - formData.health - formData.autoIns - formData.credit - formData.cell - formData.cable
     - formData.internet - formData.util - formData.misc1 - formData.misc2 - formData.misc3 - formData.misc4 - formData.living}}</h2>
 </div>
 </div>
