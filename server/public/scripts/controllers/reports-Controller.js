@@ -49,8 +49,10 @@ $scope.updateBudget = function (budget) {
   });
 };
 
-////////////Function Conditional for alert///////
-
+////////////Delete month function///////
+$scope.deleteBudget = function (budget){
+  
+}
 
 /////////////////////////////END OF CONTROLLER////////////////////////////////
 }]);
