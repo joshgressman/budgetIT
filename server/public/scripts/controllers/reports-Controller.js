@@ -50,9 +50,14 @@ $scope.updateBudget = function (budget) {
 };
 
 ////////////Delete month function///////
-$scope.deleteBudget = function (budget){
-  
-}
+$scope.deleteBudget = function (budget) {
+  console.log($scope.budgetArray[0]._id);
+  var id = $scope.budgetArray[0]._id;
+  $http.delete('/budget/' + id)
+  .then(function(){
+    console.log('DELETE budget', id);
+  });
+};
 
 /////////////////////////////END OF CONTROLLER////////////////////////////////
 }]);

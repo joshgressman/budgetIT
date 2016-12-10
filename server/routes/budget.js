@@ -38,10 +38,22 @@ router.put('/:id', function(req, res){
   Expense.findByIdAndUpdate(id,budget, function(err, budget){
     if(err){
       return res.sendStatus(500);
-      
+
     }
     console.log("success");
     res.status(204).send(budget);
+  });
+});
+
+
+router.delete('/:id', function(req, res){
+  var id = req.params.id;
+  Expense.findByIdAndRemove(id, function(err){
+    if(err){
+      res.sendStatus(500);
+      return;
+    }
+    res.sendStatus(204);
   });
 });
 
